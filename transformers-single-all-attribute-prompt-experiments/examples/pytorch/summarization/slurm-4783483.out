@@ -1,0 +1,115 @@
+k
+06/19/2022 20:19:53 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 1distributed training: False, 16-bits training: False
+06/19/2022 20:19:53 - INFO - __main__ - Training/evaluation parameters Seq2SeqTrainingArguments(
+_n_gpu=1,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+bf16=False,
+bf16_full_eval=False,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=False,
+eval_accumulation_steps=None,
+eval_steps=500,
+evaluation_strategy=IntervalStrategy.STEPS,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+generation_max_length=None,
+generation_num_beams=None,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=True,
+group_by_length=False,
+half_precision_backend=auto,
+hub_model_id=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+label_names=None,
+label_smoothing_factor=0.1,
+learning_rate=5e-05,
+length_column_name=length,
+load_best_model_at_end=True,
+local_rank=-1,
+log_level=-1,
+log_level_replica=-1,
+log_on_each_node=True,
+logging_dir=/gscratch/argon/artidoro/eventsrealm/real_events/outputs/gold-v1.1-prompt-t5-merged-entities-k_prompts-1-single-all-k=k/runs/Jun19_20-19-49_g3061,
+logging_first_step=True,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=IntervalStrategy.STEPS,
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=different_f1,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=10.0,
+optim=OptimizerNames.ADAMW_HF,
+output_dir=/gscratch/argon/artidoro/eventsrealm/real_events/outputs/gold-v1.1-prompt-t5-merged-entities-k_prompts-1-single-all-k=k,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=300,
+per_device_train_batch_size=35,
+predict_with_generate=True,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+remove_unused_columns=False,
+report_to=[],
+resume_from_checkpoint=None,
+run_name=/gscratch/argon/artidoro/eventsrealm/real_events/outputs/gold-v1.1-prompt-t5-merged-entities-k_prompts-1-single-all-k=k,
+save_on_each_node=False,
+save_steps=500,
+save_strategy=IntervalStrategy.STEPS,
+save_total_limit=2,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+sortish_sampler=False,
+tf32=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_legacy_prediction_loop=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+xpu_backend=None,
+)
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/argon/artidoro/eva_transformers/examples/pytorch/summarization/run_summarization.py", line 938, in <module>
+    main()
+  File "/mmfs1/gscratch/argon/artidoro/eva_transformers/examples/pytorch/summarization/run_summarization.py", line 397, in main
+    raw_datasets = load_dataset(extension, data_files=data_files, cache_dir=model_args.cache_dir)
+  File "/gscratch/argon/artidoro/miniconda3/envs/transformers/lib/python3.9/site-packages/datasets/load.py", line 1675, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "/gscratch/argon/artidoro/miniconda3/envs/transformers/lib/python3.9/site-packages/datasets/load.py", line 1512, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "/gscratch/argon/artidoro/miniconda3/envs/transformers/lib/python3.9/site-packages/datasets/load.py", line 1117, in dataset_module_factory
+    return PackagedDatasetModuleFactory(
+  File "/gscratch/argon/artidoro/miniconda3/envs/transformers/lib/python3.9/site-packages/datasets/load.py", line 774, in get_module
+    data_files = DataFilesDict.from_local_or_remote(patterns, use_auth_token=self.downnload_config.use_auth_token)
+  File "/gscratch/argon/artidoro/miniconda3/envs/transformers/lib/python3.9/site-packages/datasets/data_files.py", line 578, in from_local_or_remote
+    DataFilesList.from_local_or_remote(
+  File "/gscratch/argon/artidoro/miniconda3/envs/transformers/lib/python3.9/site-packages/datasets/data_files.py", line 546, in from_local_or_remote
+    data_files = resolve_patterns_locally_or_by_urls(base_path, patterns, allowed_extensions)
+  File "/gscratch/argon/artidoro/miniconda3/envs/transformers/lib/python3.9/site-packages/datasets/data_files.py", line 196, in resolve_patterns_locally_or_by_urls
+    for path in _resolve_single_pattern_locally(base_path, pattern, allowed_extensions):
+  File "/gscratch/argon/artidoro/miniconda3/envs/transformers/lib/python3.9/site-packages/datasets/data_files.py", line 146, in _resolve_single_pattern_locally
+    raise FileNotFoundError(error_msg)
+FileNotFoundError: Unable to find '/gscratch/argon/artidoro/eventsrealm/real_events/data/gold-v1.1-prompt-t5-merged-entities-k=k/test.json' at /mmfs1/gscratch/argon/artidoro/eva_transformers/examples/pytorch/summarization

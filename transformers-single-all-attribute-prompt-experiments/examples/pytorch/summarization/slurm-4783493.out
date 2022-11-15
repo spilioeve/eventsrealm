@@ -1,0 +1,6 @@
+20
+/var/spool/slurmd/job4783493/slurm_script: line 16: source: /gscratch/argon/artidoro/miniconda3/envs/eva_transformers: is a directory
+Traceback (most recent call last):
+  File "/mmfs1/gscratch/argon/artidoro/eva_transformers/examples/pytorch/summarization/run_summarization.py", line 21, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'

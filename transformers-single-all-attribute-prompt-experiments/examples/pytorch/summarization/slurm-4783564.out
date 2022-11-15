@@ -1,0 +1,244 @@
+20
+/var/spool/slurmd/job4783564/slurm_script: line 16: activate: No such file or directory
+06/19/2022 21:01:52 - WARNING - __main__ - Process rank: -1, device: cuda:0, n_gpu: 1distributed training: False, 16-bits training: False
+06/19/2022 21:01:52 - INFO - __main__ - Training/evaluation parameters Seq2SeqTrainingArguments(
+_n_gpu=1,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+bf16=False,
+bf16_full_eval=False,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=False,
+eval_accumulation_steps=None,
+eval_steps=500,
+evaluation_strategy=IntervalStrategy.STEPS,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+generation_max_length=None,
+generation_num_beams=None,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=True,
+group_by_length=False,
+half_precision_backend=auto,
+hub_model_id=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+label_names=None,
+label_smoothing_factor=0.1,
+learning_rate=5e-05,
+length_column_name=length,
+load_best_model_at_end=True,
+local_rank=-1,
+log_level=-1,
+log_level_replica=-1,
+log_on_each_node=True,
+logging_dir=/gscratch/argon/artidoro/eventsrealm/real_events/outputs/gold-v1.1-prompt-t5-merged-entities-k_prompts-5-checkpoint-5000-single-all-k=20/runs/Jun19_21-01-50_g3040,
+logging_first_step=True,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=IntervalStrategy.STEPS,
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=different_f1,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=10.0,
+optim=OptimizerNames.ADAMW_HF,
+output_dir=/gscratch/argon/artidoro/eventsrealm/real_events/outputs/gold-v1.1-prompt-t5-merged-entities-k_prompts-5-checkpoint-5000-single-all-k=20,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=300,
+per_device_train_batch_size=35,
+predict_with_generate=True,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+remove_unused_columns=False,
+report_to=[],
+resume_from_checkpoint=None,
+run_name=/gscratch/argon/artidoro/eventsrealm/real_events/outputs/gold-v1.1-prompt-t5-merged-entities-k_prompts-5-checkpoint-5000-single-all-k=20,
+save_on_each_node=False,
+save_steps=500,
+save_strategy=IntervalStrategy.STEPS,
+save_total_limit=2,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+sortish_sampler=False,
+tf32=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_legacy_prediction_loop=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+xpu_backend=None,
+)
+06/19/2022 21:01:53 - WARNING - datasets.builder - Using custom data configuration default-4ee33e6dea318875
+06/19/2022 21:01:53 - INFO - datasets.builder - Overwrite dataset info from restored data version.
+06/19/2022 21:01:53 - INFO - datasets.info - Loading Dataset info from /mmfs1/home/artidoro/.cache/huggingface/datasets/json/default-4ee33e6dea318875/0.0.0/ac0ca5f5289a6cf108e706efcf040422dbbfa8e658dee6a819f20d76bb84d26b
+06/19/2022 21:01:53 - WARNING - datasets.builder - Reusing dataset json (/mmfs1/home/artidoro/.cache/huggingface/datasets/json/default-4ee33e6dea318875/0.0.0/ac0ca5f5289a6cf108e706efcf040422dbbfa8e658dee6a819f20d76bb84d26b)
+06/19/2022 21:01:53 - INFO - datasets.info - Loading Dataset info from /mmfs1/home/artidoro/.cache/huggingface/datasets/json/default-4ee33e6dea318875/0.0.0/ac0ca5f5289a6cf108e706efcf040422dbbfa8e658dee6a819f20d76bb84d26b
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 94.18it/s]
+[INFO|configuration_utils.py:651] 2022-06-19 21:01:53,138 >> loading configuration file /gscratch/argon/artidoro/eventsrealm/real_events/outputs/gold-v1.1-prompt-t5-merged-entities-k_prompts-5-single-all-2/checkpoint-5000/config.json
+[INFO|configuration_utils.py:689] 2022-06-19 21:01:53,141 >> Model config T5Config {
+  "_name_or_path": "/gscratch/argon/artidoro/eventsrealm/real_events/outputs/gold-v1.1-prompt-t5-merged-entities-k_prompts-5-single-all-2/checkpoint-5000",
+  "architectures": [
+    "T5ForConditionalGeneration"
+  ],
+  "d_ff": 3072,
+  "d_kv": 64,
+  "d_model": 768,
+  "decoder_start_token_id": 0,
+  "dropout_rate": 0.1,
+  "eos_token_id": 1,
+  "feed_forward_proj": "relu",
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "layer_norm_epsilon": 1e-06,
+  "model_type": "t5",
+  "n_positions": 512,
+  "num_decoder_layers": 12,
+  "num_heads": 12,
+  "num_layers": 12,
+  "output_past": true,
+  "pad_token_id": 0,
+  "relative_attention_num_buckets": 32,
+  "task_specific_params": {
+    "summarization": {
+      "early_stopping": true,
+      "length_penalty": 2.0,
+      "max_length": 200,
+      "min_length": 30,
+      "no_repeat_ngram_size": 3,
+      "num_beams": 4,
+      "prefix": "summarize: "
+    },
+    "translation_en_to_de": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to German: "
+    },
+    "translation_en_to_fr": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to French: "
+    },
+    "translation_en_to_ro": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to Romanian: "
+    }
+  },
+  "torch_dtype": "float32",
+  "transformers_version": "4.17.0.dev0",
+  "use_cache": true,
+  "vocab_size": 32100
+}
+
+[INFO|tokenization_utils_base.py:1703] 2022-06-19 21:01:53,152 >> Didn't find file /gscratch/argon/artidoro/eventsrealm/real_events/outputs/gold-v1.1-prompt-t5-merged-entities-k_prompts-5-single-all-2/checkpoint-5000/added_tokens.json. We won't load it.
+[INFO|tokenization_utils_base.py:1786] 2022-06-19 21:01:53,153 >> loading file /gscratch/argon/artidoro/eventsrealm/real_events/outputs/gold-v1.1-prompt-t5-merged-entities-k_prompts-5-single-all-2/checkpoint-5000/spiece.model
+[INFO|tokenization_utils_base.py:1786] 2022-06-19 21:01:53,153 >> loading file /gscratch/argon/artidoro/eventsrealm/real_events/outputs/gold-v1.1-prompt-t5-merged-entities-k_prompts-5-single-all-2/checkpoint-5000/tokenizer.json
+[INFO|tokenization_utils_base.py:1786] 2022-06-19 21:01:53,153 >> loading file None
+[INFO|tokenization_utils_base.py:1786] 2022-06-19 21:01:53,154 >> loading file /gscratch/argon/artidoro/eventsrealm/real_events/outputs/gold-v1.1-prompt-t5-merged-entities-k_prompts-5-single-all-2/checkpoint-5000/special_tokens_map.json
+[INFO|tokenization_utils_base.py:1786] 2022-06-19 21:01:53,154 >> loading file /gscratch/argon/artidoro/eventsrealm/real_events/outputs/gold-v1.1-prompt-t5-merged-entities-k_prompts-5-single-all-2/checkpoint-5000/tokenizer_config.json
+[INFO|modeling_utils.py:1435] 2022-06-19 21:01:53,256 >> loading weights file /gscratch/argon/artidoro/eventsrealm/real_events/outputs/gold-v1.1-prompt-t5-merged-entities-k_prompts-5-single-all-2/checkpoint-5000/pytorch_model.bin
+[INFO|modeling_utils.py:1704] 2022-06-19 21:01:55,748 >> All model checkpoint weights were used when initializing T5ForConditionalGeneration.
+
+[INFO|modeling_utils.py:1712] 2022-06-19 21:01:55,748 >> All the weights of T5ForConditionalGeneration were initialized from the model checkpoint at /gscratch/argon/artidoro/eventsrealm/real_events/outputs/gold-v1.1-prompt-t5-merged-entities-k_prompts-5-single-all-2/checkpoint-5000.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use T5ForConditionalGeneration for predictions without further training.
+Running tokenizer on validation dataset:   0%|          | 0/20 [00:00<?, ?ba/s]06/19/2022 21:01:55 - INFO - datasets.arrow_dataset - Caching processed dataset at /mmfs1/home/artidoro/.cache/huggingface/datasets/json/default-4ee33e6dea318875/0.0.0/ac0ca5f5289a6cf108e706efcf040422dbbfa8e658dee6a819f20d76bb84d26b/cache-c760339ed3d0cee4.arrow
+Running tokenizer on validation dataset:   5%|▌         | 1/20 [00:00<00:04,  4.21ba/s]Running tokenizer on validation dataset:  10%|█         | 2/20 [00:00<00:03,  4.63ba/s]Running tokenizer on validation dataset:  15%|█▌        | 3/20 [00:00<00:03,  4.56ba/s]Running tokenizer on validation dataset:  20%|██        | 4/20 [00:00<00:03,  4.52ba/s]Running tokenizer on validation dataset:  25%|██▌       | 5/20 [00:01<00:03,  4.52ba/s]Running tokenizer on validation dataset:  30%|███       | 6/20 [00:01<00:03,  4.48ba/s]Running tokenizer on validation dataset:  35%|███▌      | 7/20 [00:01<00:02,  4.45ba/s]Running tokenizer on validation dataset:  40%|████      | 8/20 [00:01<00:02,  4.46ba/s]Running tokenizer on validation dataset:  45%|████▌     | 9/20 [00:02<00:02,  4.45ba/s]Running tokenizer on validation dataset:  50%|█████     | 10/20 [00:02<00:02,  4.11ba/s]Running tokenizer on validation dataset:  55%|█████▌    | 11/20 [00:02<00:02,  4.24ba/s]Running tokenizer on validation dataset:  60%|██████    | 12/20 [00:02<00:01,  4.19ba/s]Running tokenizer on validation dataset:  65%|██████▌   | 13/20 [00:02<00:01,  4.26ba/s]Running tokenizer on validation dataset:  70%|███████   | 14/20 [00:03<00:01,  4.32ba/s]Running tokenizer on validation dataset:  75%|███████▌  | 15/20 [00:03<00:01,  4.29ba/s]Running tokenizer on validation dataset:  80%|████████  | 16/20 [00:03<00:00,  4.25ba/s]Running tokenizer on validation dataset:  85%|████████▌ | 17/20 [00:03<00:00,  4.26ba/s]Running tokenizer on validation dataset:  90%|█████████ | 18/20 [00:04<00:00,  4.20ba/s]Running tokenizer on validation dataset:  95%|█████████▌| 19/20 [00:04<00:00,  3.82ba/s]Running tokenizer on validation dataset: 100%|██████████| 20/20 [00:04<00:00,  4.13ba/s]Running tokenizer on validation dataset: 100%|██████████| 20/20 [00:04<00:00,  4.27ba/s]
+06/19/2022 21:02:05 - INFO - __main__ - *** Evaluate ***
+[INFO|trainer.py:2387] 2022-06-19 21:02:05,701 >> ***** Running Evaluation *****
+[INFO|trainer.py:2389] 2022-06-19 21:02:05,702 >>   Num examples = 19800
+[INFO|trainer.py:2392] 2022-06-19 21:02:05,702 >>   Batch size = 300
+  0%|          | 0/66 [00:00<?, ?it/s]  3%|▎         | 2/66 [00:01<00:32,  1.95it/s]  5%|▍         | 3/66 [00:02<00:53,  1.18it/s]  6%|▌         | 4/66 [00:04<01:14,  1.20s/it]  8%|▊         | 5/66 [00:05<01:08,  1.11s/it]  9%|▉         | 6/66 [00:05<01:01,  1.02s/it] 11%|█         | 7/66 [00:07<01:01,  1.04s/it] 12%|█▏        | 8/66 [00:09<01:19,  1.37s/it] 14%|█▎        | 9/66 [00:10<01:11,  1.26s/it] 15%|█▌        | 10/66 [00:11<01:11,  1.28s/it] 17%|█▋        | 11/66 [00:12<01:06,  1.21s/it] 18%|█▊        | 12/66 [00:13<01:04,  1.20s/it] 20%|█▉        | 13/66 [00:14<00:59,  1.12s/it] 21%|██        | 14/66 [00:15<00:59,  1.15s/it] 23%|██▎       | 15/66 [00:16<00:57,  1.13s/it] 24%|██▍       | 16/66 [00:17<00:55,  1.10s/it] 26%|██▌       | 17/66 [00:19<00:55,  1.12s/it] 27%|██▋       | 18/66 [00:20<00:54,  1.14s/it] 29%|██▉       | 19/66 [00:21<00:59,  1.27s/it] 30%|███       | 20/66 [00:23<00:57,  1.24s/it] 32%|███▏      | 21/66 [00:24<00:54,  1.21s/it] 33%|███▎      | 22/66 [00:25<00:52,  1.19s/it] 35%|███▍      | 23/66 [00:26<00:48,  1.12s/it] 36%|███▋      | 24/66 [00:27<00:47,  1.13s/it] 38%|███▊      | 25/66 [00:28<00:49,  1.21s/it] 39%|███▉      | 26/66 [00:29<00:44,  1.12s/it] 41%|████      | 27/66 [00:30<00:41,  1.06s/it] 42%|████▏     | 28/66 [00:31<00:41,  1.09s/it] 44%|████▍     | 29/66 [00:32<00:40,  1.09s/it] 45%|████▌     | 30/66 [00:34<00:44,  1.24s/it] 47%|████▋     | 31/66 [00:35<00:40,  1.16s/it] 48%|████▊     | 32/66 [00:36<00:36,  1.08s/it] 50%|█████     | 33/66 [00:37<00:40,  1.23s/it] 52%|█████▏    | 34/66 [00:38<00:36,  1.15s/it] 53%|█████▎    | 35/66 [00:40<00:35,  1.14s/it] 55%|█████▍    | 36/66 [00:41<00:34,  1.16s/it] 56%|█████▌    | 37/66 [00:42<00:36,  1.25s/it] 58%|█████▊    | 38/66 [00:44<00:35,  1.27s/it] 59%|█████▉    | 39/66 [00:44<00:31,  1.17s/it] 61%|██████    | 40/66 [00:46<00:31,  1.20s/it] 62%|██████▏   | 41/66 [00:46<00:26,  1.07s/it] 64%|██████▎   | 42/66 [00:48<00:25,  1.06s/it] 65%|██████▌   | 43/66 [00:49<00:24,  1.07s/it] 67%|██████▋   | 44/66 [00:50<00:25,  1.15s/it] 68%|██████▊   | 45/66 [00:51<00:23,  1.12s/it] 70%|██████▉   | 46/66 [00:52<00:21,  1.08s/it] 71%|███████   | 47/66 [00:53<00:20,  1.09s/it] 73%|███████▎  | 48/66 [00:54<00:19,  1.09s/it] 74%|███████▍  | 49/66 [00:55<00:18,  1.09s/it] 76%|███████▌  | 50/66 [00:56<00:18,  1.13s/it] 77%|███████▋  | 51/66 [00:58<00:18,  1.23s/it] 79%|███████▉  | 52/66 [00:59<00:16,  1.19s/it] 80%|████████  | 53/66 [01:00<00:15,  1.18s/it] 82%|████████▏ | 54/66 [01:02<00:15,  1.28s/it] 83%|████████▎ | 55/66 [01:03<00:14,  1.28s/it] 85%|████████▍ | 56/66 [01:04<00:12,  1.28s/it] 86%|████████▋ | 57/66 [01:05<00:10,  1.19s/it] 88%|████████▊ | 58/66 [01:06<00:09,  1.14s/it] 89%|████████▉ | 59/66 [01:07<00:08,  1.16s/it] 91%|█████████ | 60/66 [01:09<00:07,  1.20s/it] 92%|█████████▏| 61/66 [01:10<00:06,  1.22s/it] 94%|█████████▍| 62/66 [01:11<00:04,  1.20s/it] 95%|█████████▌| 63/66 [01:12<00:03,  1.19s/it] 97%|█████████▋| 64/66 [01:13<00:02,  1.15s/it] 98%|█████████▊| 65/66 [01:15<00:01,  1.14s/it]100%|██████████| 66/66 [01:16<00:00,  1.18s/it]06/19/2022 21:03:36 - INFO - datasets.metric - Removing /mmfs1/home/artidoro/.cache/huggingface/metrics/rouge/default/default_experiment-1-0.arrow
+100%|██████████| 66/66 [01:30<00:00,  1.38s/it]
+[INFO|modelcard.py:460] 2022-06-19 21:03:37,906 >> Dropping the following result as it does not have all the necessary fields:
+{'task': {'name': 'Summarization', 'type': 'summarization'}}
+different_f1 0.5079912958655362
+different_prec 0.5186149839129769
+different_rec 0.49779411764705883
+unchanged_f1 0.9917880754890899
+unchanged_prec 0.991449096458699
+unchanged_rec 0.9921272863943874
+***** eval metrics *****
+  eval_different_f1                       =      0.508
+  eval_different_f1_amount                =     0.0202
+  eval_different_f1_appearance            =        0.0
+  eval_different_f1_availability          =       0.08
+  eval_different_f1_brightness            =     0.6349
+  eval_different_f1_cleanness             =     0.5003
+  eval_different_f1_color                 =     0.5032
+  eval_different_f1_complexity            =     0.0769
+  eval_different_f1_composition           =     0.2611
+  eval_different_f1_cost                  =      0.495
+  eval_different_f1_coverage              =        0.0
+  eval_different_f1_distance              =     0.2432
+  eval_different_f1_electric conductivity =        0.4
+  eval_different_f1_focus                 =     0.3448
+  eval_different_f1_fullness              =     0.2933
+  eval_different_f1_hardness              =     0.0278
+  eval_different_f1_knowledge             =     0.6687
+  eval_different_f1_length                =     0.2295
+  eval_different_f1_location              =     0.7307
+  eval_different_f1_motion                =     0.2239
+  eval_different_f1_openness              =     0.0233
+  eval_different_f1_organization          =     0.3301
+  eval_different_f1_orientation           =     0.2482
+  eval_different_f1_ownership             =     0.2319
+  eval_different_f1_power                 =     0.2705
+  eval_different_f1_pressure              =     0.2581
+  eval_different_f1_shape                 =     0.3226
+  eval_different_f1_size                  =     0.2114
+  eval_different_f1_skill                 =     0.2174
+  eval_different_f1_smell                 =     0.4578
+  eval_different_f1_sound                 =        0.0
+  eval_different_f1_speed                 =     0.4595
+  eval_different_f1_stability             =     0.1266
+  eval_different_f1_step                  =     0.2553
+  eval_different_f1_strength              =     0.1136
+  eval_different_f1_taste                 =     0.0225
+  eval_different_f1_temperature           =     0.5273
+  eval_different_f1_texture               =      0.379
+  eval_different_f1_thickness             =        0.0
+  eval_different_f1_volume                =     0.4959
+  eval_different_f1_weight                =     0.4462
+  eval_different_f1_wetness               =     0.4686
+  eval_different_prec                     =     0.5186
+  eval_different_rec                      =     0.4978
+  eval_gen_len                            =    10.0595
+  eval_loss                               =     1.5844
+  eval_rouge1                             =    89.0634
+  eval_rouge2                             =    79.3187
+  eval_rougeL                             =    88.9855
+  eval_rougeLsum                          =    88.9897
+  eval_runtime                            = 0:01:31.91
+  eval_samples                            =      19800
+  eval_samples_per_second                 =    215.405
+  eval_steps_per_second                   =      0.718
+  eval_unchanged_f1                       =     0.9918
+  eval_unchanged_prec                     =     0.9914
+  eval_unchanged_rec                      =     0.9921

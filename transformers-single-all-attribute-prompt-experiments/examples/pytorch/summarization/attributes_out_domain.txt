@@ -1,0 +1,42 @@
+flexibility
+viability
+height
+pose
+tension
+magnitude
+direction
+activity
+area
+visibility
+quantity
+density
+wholeness
+angle
+contents
+hydration
+safety
+exposure
+spacial relation
+tightness
+balance
+posture
+age
+time
+familiarity
+usage
+consistency
+thermal conductivity
+material
+capacity
+granularity
+intensity
+existence
+resistance
+width
+life
+consumption
+documentation
+softness
+pain
+emotional state,feeling,emotion
+tenseness

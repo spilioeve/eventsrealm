@@ -1,0 +1,17 @@
+python transformers-single-all-prompt-experiments/examples/pytorch/language-modeling/run_mlm.py \
+    --model_name_or_path roberta-large \
+    --validation_file "data/preprocessed_openpi_single_attribute_data/test.json" \
+    --do_eval \
+    --logging_first_step \
+    --output_dir "outputs/single_attribute_test" \
+    --per_device_train_batch_size 2 \
+    --per_device_eval_batch_size 10 \
+    --remove_unused_columns False\
+    --save_total_limit 1 \
+    --evaluation_strategy steps \
+    --logging_steps 1000 \
+    --save_steps 1000 \
+    --eval_steps 1000 \
+    --fp16 \
+    --overwrite_output_dir \
+    --max_seq_length 512 \

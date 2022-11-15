@@ -49,12 +49,12 @@ The code for the n-gram classifier can be found at
 
 
 ## Citation
-`
-@article{lively2019analyzing,
-  title={EVENTS REALM: Event Reasoning of Entity States via Language Models},
+```
+@article{spiliopoulou2022events,
+  title={EvEntS ReaLM: Event Reasoning of Entity States via Language Models},
   author={Spiliopoulou, Evangelia and Pagnoni, Artidoro and Bisk, Yonatan and Hovy, Eduard},
   journal={arXiv preprint arXiv:2211.05392},
   year={2022}
 }
 
-`
+```
